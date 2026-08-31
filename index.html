@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CutPic — Divida, baixe e imprima. Sem burocracia!</title>
+<meta name="description" content="CutPic divide qualquer imagem em um pôster para impressão. Escolha linhas e colunas, veja a prévia da grade e baixe o PDF pronto para imprimir. Tudo no seu navegador, sem cadastro." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">CutPic</span>
+    </a>
+    <nav class="header-nav" aria-label="Navegação">
+      <a href="#ferramenta">Ferramenta</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="privacidade.html">Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <h1>CutPic</h1>
+      <p class="tagline">Divida, baixe e imprima. <strong>Sem burocracia!</strong></p>
+      <p class="tagline" style="font-size:16px; max-width:52ch;">
+        Envie uma imagem, escolha em quantas partes ela deve ser cortada e receba um PDF em A4 pronto para imprimir e montar como pôster — tudo processado localmente, no seu navegador.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#ferramenta" class="btn btn-primary">
+          Começar agora
+        </a>
+        <a href="#como-funciona" class="btn btn-ghost">Como funciona</a>
+      </div>
+      <p class="hero-meta">Sem cadastro · sem banco de dados · sem envio para servidores</p>
+    </div>
+  </section>
+
+  <section class="tool-section" id="ferramenta">
+    <div class="wrap">
+      <div class="tool-panel">
+        <div class="tool-grid">
+
+          <!-- STAGE: upload / preview -->
+          <div class="stage">
+            <div class="dropzone" id="dropzone" tabindex="0" role="button"
+                 aria-label="Enviar imagem por clique ou arrastar e soltar">
+              <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" />
+              <div>
+                <div class="dropzone-icon" aria-hidden="true"></div>
+                <p class="dropzone-title">Arraste sua imagem aqui</p>
+                <p class="dropzone-sub">ou <span class="link">clique para selecionar</span> — PNG, JPG ou WEBP</p>
+              </div>
+            </div>
+
+            <div class="preview-wrap" id="previewWrap">
+              <div class="preview-frame" id="previewFrame">
+                <img id="previewImg" alt="Prévia da imagem enviada" />
+                <canvas class="overlay" id="overlayCanvas"></canvas>
+                <span class="corner-mark tl" aria-hidden="true"></span>
+                <span class="corner-mark tr" aria-hidden="true"></span>
+                <span class="corner-mark bl" aria-hidden="true"></span>
+                <span class="corner-mark br" aria-hidden="true"></span>
+              </div>
+              <div class="preview-footer">
+                <span class="file-name" id="fileName"></span>
+                <button class="link-btn" id="changeImageBtn" type="button">Trocar imagem</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTROLS -->
+          <div class="stage-controls">
+            <div class="control-block">
+              <h2>Grade de corte</h2>
+              <p class="hint">Defina em quantas linhas e colunas a imagem será dividida (1 a 12). Marcas de corte e guias de alinhamento são adicionadas automaticamente na prévia e em cada página do PDF, para cortar e colar com precisão.</p>
+              <div class="stepper-row">
+                <div class="stepper">
+                  <label for="rowsInput">Linhas</label>
+                  <div class="stepper-controls">
+                    <button type="button" id="rowsMinus" aria-label="Diminuir linhas">−</button>
+                    <input type="number" id="rowsInput" min="1" max="12" value="2" inputmode="numeric" />
+                    <button type="button" id="rowsPlus" aria-label="Aumentar linhas">+</button>
+                  </div>
+                </div>
+                <div class="stepper">
+                  <label for="colsInput">Colunas</label>
+                  <div class="stepper-controls">
+                    <button type="button" id="colsMinus" aria-label="Diminuir colunas">−</button>
+                    <input type="number" id="colsInput" min="1" max="12" value="2" inputmode="numeric" />
+                    <button type="button" id="colsPlus" aria-label="Aumentar colunas">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="page-count">
+                <span class="num" id="pageCount">4</span>
+                <span class="label">páginas serão geradas no PDF</span>
+              </div>
+            </div>
+
+            <div class="generate-block">
+              <button class="btn btn-primary" id="generateBtn" disabled>
+                Gerar e baixar PDF
+              </button>
+              <p class="status-line" id="statusLine">Envie uma imagem para começar.</p>
+              <p class="privacy-note">
+                Sua imagem é processada inteiramente no seu navegador e é descartada assim que o PDF é gerado. Nada é enviado a servidores. Saiba mais na <a href="privacidade.html">Política de Privacidade</a>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="como-funciona">
+    <div class="wrap">
+      <h2>Do arquivo ao pôster impresso em três passos</h2>
+      <div class="step-list">
+        <div class="step">
+          <p class="step-num">01</p>
+          <h3>Envie</h3>
+          <p>Arraste a imagem para a área de upload ou clique para selecionar um arquivo do seu computador.</p>
+        </div>
+        <div class="step">
+          <p class="step-num">02</p>
+          <h3>Ajuste a grade</h3>
+          <p>Escolha o número de linhas e colunas. A prévia mostra exatamente onde cada corte vai acontecer.</p>
+        </div>
+        <div class="step">
+          <p class="step-num">03</p>
+          <h3>Baixe e imprima</h3>
+          <p>Gere o PDF em A4 com um clique. Cada página traz marcas de corte e guias de alinhamento nos cantos e bordas, para encaixar as partes com precisão ao montar o pôster.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+    </div>
+    <p class="footer-copy">© 2026 CutPic. Todos os direitos reservados. Desenvolvido por Dadson Gomes.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

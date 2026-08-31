@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de Privacidade — CutPic</title>
+<meta name="description" content="Como o CutPic trata as imagens enviadas: processamento local, sem uploads a servidores e sem armazenamento." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">CutPic</span>
+    </a>
+    <nav class="header-nav" aria-label="Navegação">
+      <a href="index.html#ferramenta">Ferramenta</a>
+      <a href="termos.html">Termos de Uso</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="legal-hero">
+    <div class="wrap">
+      <a href="index.html" class="back-link">← Voltar para o CutPic</a>
+      <h1>Política de Privacidade</h1>
+      <p class="updated">Última atualização: 31 de agosto de 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body wrap">
+    <h2>1. O essencial, em uma frase</h2>
+    <p>
+      O CutPic funciona inteiramente no seu navegador: a imagem que você envia nunca sai do seu computador, não é
+      transmitida para nenhum servidor, e é descartada da memória assim que você gera o PDF ou fecha a página.
+    </p>
+
+    <h2>2. Como o processamento funciona</h2>
+    <p>
+      Quando você seleciona ou arrasta uma imagem para o CutPic, o arquivo é lido diretamente pelo seu navegador
+      usando APIs padrão da web (como <strong>File</strong> e <strong>Canvas</strong>). Todo o corte da imagem em
+      linhas e colunas, a montagem da prévia com a grade e a geração do arquivo PDF acontecem localmente, no seu
+      próprio dispositivo. Não existe um servidor de back-end do CutPic recebendo, armazenando ou processando a sua
+      imagem em nenhuma etapa.
+    </p>
+
+    <h2>3. Caráter temporário do arquivo enviado</h2>
+    <p>
+      A imagem enviada é mantida apenas na memória temporária do navegador (RAM), pelo tempo necessário para exibir
+      a prévia e gerar o PDF final. Ela não é:
+    </p>
+    <ul>
+      <li>Enviada, copiada ou transmitida para servidores do CutPic ou de terceiros;</li>
+      <li>Salva em bancos de dados, já que o CutPic não utiliza nenhum banco de dados;</li>
+      <li>Gravada permanentemente no disco do seu computador pelo CutPic;</li>
+      <li>Armazenada em <em>localStorage</em>, <em>sessionStorage</em> ou qualquer outro mecanismo de persistência do navegador.</li>
+    </ul>
+    <p>
+      Ao clicar em "Trocar imagem", atualizar a página ou fechá-la, a referência à imagem é liberada da memória do
+      navegador. O único arquivo que "sobrevive" ao uso da ferramenta é o PDF que você mesmo escolhe baixar para o
+      seu dispositivo — e esse download é controlado inteiramente pelo seu navegador, como qualquer outro download.
+    </p>
+
+    <h2>4. Cadastro e contas de usuário</h2>
+    <p>
+      O CutPic não exige criação de conta, login, e-mail ou qualquer outro dado pessoal para ser utilizado. Não há
+      formulários de cadastro nem coleta de identificadores pessoais na ferramenta de corte de imagens.
+    </p>
+
+    <h2>5. Cookies e rastreamento</h2>
+    <p>
+      O CutPic, em sua funcionalidade principal, não utiliza cookies próprios para rastrear o uso da ferramenta.
+      Bibliotecas de terceiros carregadas por meio de redes de distribuição de conteúdo (CDN), como as fontes do
+      Google Fonts e a biblioteca de geração de PDF, podem receber requisições técnicas padrão do navegador (como o
+      endereço IP), inerentes ao funcionamento da web, mas não recebem a imagem enviada nem o conteúdo gerado.
+    </p>
+
+    <h2>6. Dados de acesso do servidor de hospedagem</h2>
+    <p>
+      Como qualquer site, o provedor de hospedagem do CutPic pode registrar automaticamente informações técnicas
+      básicas de acesso (como endereço IP, data e hora da visita e tipo de navegador), para fins de segurança e
+      operação da infraestrutura. Esses registros não têm relação com o conteúdo das imagens processadas na
+      ferramenta, que nunca chega ao servidor.
+    </p>
+
+    <h2>7. Compartilhamento com terceiros</h2>
+    <p>
+      Como nenhuma imagem enviada é transmitida a um servidor, não há compartilhamento de imagens com terceiros,
+      anunciantes ou parceiros comerciais em nenhuma hipótese.
+    </p>
+
+    <h2>8. Menores de idade</h2>
+    <p>
+      O CutPic é uma ferramenta de uso geral e não coleta dados pessoais, mas recomenda-se que menores de idade
+      utilizem a ferramenta com supervisão de um responsável, especialmente ao lidar com imagens que contenham
+      informações pessoais.
+    </p>
+
+    <h2>9. Alterações nesta política</h2>
+    <p>
+      Esta Política de Privacidade pode ser atualizada periodicamente para refletir melhorias na ferramenta. A data
+      de "última atualização", no topo desta página, indica quando a versão vigente entrou em vigor.
+    </p>
+
+    <h2>10. Contato</h2>
+    <p>
+      Dúvidas sobre esta Política de Privacidade podem ser direcionadas ao desenvolvedor responsável pelo CutPic,
+      Dadson Gomes.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+    </div>
+    <p class="footer-copy">© 2026 CutPic. Todos os direitos reservados. Desenvolvido por Dadson Gomes.</p>
+  </div>
+</footer>
+
+</body>
+</html>
