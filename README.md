@@ -109,6 +109,24 @@ Toda a identidade visual (cores, tipografia, espaçamentos) está centralizada
 em variáveis CSS no topo de `assets/css/style.css`, o que facilita ajustar a
 paleta ou a tipografia sem precisar alterar o restante do código.
 
+## Responsividade
+
+O layout foi construído mobile-first, com breakpoints em `assets/css/style.css`
+para 860px, 760px, 640px, 460px e 360px, cobrindo computador, tablet e
+celular. Em telas estreitas: a navegação do cabeçalho se reduz (o link "Como
+funciona" é ocultado abaixo de 460px, já que a mesma seção é acessível pelo
+botão principal do topo), o painel da ferramenta empilha a área de upload
+sobre os controles, os campos de linhas/colunas ganham alvos de toque
+maiores, e o rodapé passa a empilhar verticalmente. Os campos numéricos usam
+fonte de 16px ou mais para evitar zoom automático no iOS ao tocar neles.
+
 ---
 
 © 2026 CutPic. Todos os direitos reservados. Desenvolvido por Dadson Gomes.
+
+
+## Vercel Web Analytics
+
+O projeto inclui o script oficial do Vercel Web Analytics nas páginas HTML. Depois de publicar esta versão na Vercel, abra o projeto > Analytics e confirme a coleta. O painel pode levar alguns instantes para começar a exibir os dados.
+
+O Analytics é usado para contar visitantes e visualizações de página. O conteúdo das imagens processadas pelo CutPic não é enviado para o Analytics.
