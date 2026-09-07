@@ -130,3 +130,4 @@ fonte de 16px ou mais para evitar zoom automático no iOS ao tocar neles.
 O projeto inclui o script oficial do Vercel Web Analytics nas páginas HTML. Depois de publicar esta versão na Vercel, abra o projeto > Analytics e confirme a coleta. O painel pode levar alguns instantes para começar a exibir os dados.
 
 O Analytics é usado para contar visitantes e visualizações de página. O conteúdo das imagens processadas pelo CutPic não é enviado para o Analytics.
+Vercel Analytics ativado.
